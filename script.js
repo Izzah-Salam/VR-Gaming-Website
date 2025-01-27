@@ -1,18 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".card");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const cards = document.querySelectorAll(".card");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("autoDisplay");
-        } else {
-          entry.target.classList.remove("autoDisplay");
-        }
-      });
-    },
-    { threshold: 0.3 } // Trigger animation when 30% of the card is visible
-  );
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           entry.target.classList.add("autoDisplay");
+//         } else {
+//           entry.target.classList.remove("autoDisplay");
+//         }
+//       });
+//     },
+//     { threshold: 0.3 } // Trigger animation when 30% of the card is visible
+//   );
 
   cards.forEach((card) => observer.observe(card));
 });
